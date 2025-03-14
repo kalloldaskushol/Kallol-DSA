@@ -15,7 +15,7 @@ int main (){
     char grade = 'A';
     int value = grade; //Implicit Type Casting
 
-    cout << value << endl;
+    cout << value << endl; //65 
 
     double price = 100.9999999999999;
     int newPrice = (int)price;
