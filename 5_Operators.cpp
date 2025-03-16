@@ -12,6 +12,7 @@ int main (){
     cout << "Modulo: " << (a % b) << endl;        // Modulus
 
     // Relational Operators: ==, !=, >, <, >=, <=
+
     cout << "Equal: " << (a == b) << endl;        // Equal to
     cout << "Not Equal: " << (a != b) << endl;    // Not equal to
     cout << "Greater: " << (a > b) << endl;       // Greater than
@@ -25,26 +26,6 @@ int main (){
     cout << "Logical OR: " << (x || y) << endl;   // Logical OR
     cout << "Logical NOT: " << (!x) << endl;      // Logical NOT
 
-    // Bitwise Operators: &, |, ^, ~
-    int c = 5, d = 9;
-    cout << "Bitwise AND: " << (c & d) << endl;   // Bitwise AND
-    cout << "Bitwise OR: " << (c | d) << endl;    // Bitwise OR
-    cout << "Bitwise XOR: " << (c ^ d) << endl;   // Bitwise XOR
-    cout << "Bitwise NOT: " << (~c) << endl;      // Bitwise NOT
-
-    // Assignment Operators: =, +=, -=, *=, /=, %=
-    int e = 10;
-    e += 5;  // e = e + 5
-    cout << "Add and Assign: " << e << endl;
-    e -= 3;  // e = e - 3
-    cout << "Subtract and Assign: " << e << endl;
-    e *= 2;  // e = e * 2
-    cout << "Multiply and Assign: " << e << endl;
-    e /= 4;  // e = e / 4
-    cout << "Divide and Assign: " << e << endl;
-    e %= 3;  // e = e % 3
-    cout << "Modulo and Assign: " << e << endl;
-
     // Increment and Decrement Operators: ++, --
     int f = 10;
     cout << "Pre-increment: " << (++f) << endl;  // Pre-increment
@@ -53,6 +34,22 @@ int main (){
     cout << "Pre-decrement: " << (--f) << endl;  // Pre-decrement
     cout << "Post-decrement: " << (f--) << endl; // Post-decrement
     cout << "After Post-decrement: " << f << endl;
+
+    // Bitwise Operators
+
+    // Bitwise and it is mainly the multiplication of binary numbers and give us the result in decimal
+
+    int g = 4, h = 8;
+    cout << "bitwise AND : " << (g & h) << endl;
+
+    // Bitwise OR, it is mainly the OR Operation of binary numbers and give us the result in decimal
+
+    cout << "bitwise OR : " << (g | h) << endl;
+
+    // Bitwise XOR it is mainly the XOR of binary numbers and give us the result in decimal
+
+    cout << "bitwise XOR : " << (g ^ h) << endl;
+
 
     return 0;
 }
