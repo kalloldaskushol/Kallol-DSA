@@ -12,6 +12,7 @@ void quickSort(int start, int ending, int a[]){
         if(i < j) swap(a[i], a[j]);
     }
     swap(a[pivot], a[j]);
+    
     quickSort(start, j-1,a);
     quickSort(j+1, ending, a);
 }
@@ -21,7 +22,7 @@ int main(){
     int n, arr[100];
     cin >> n ;
     for(int i=0; i<n; i++){
-        cin >>arr[i];
+        cin >> arr[i];
     }
     quickSort(0, n-1, arr);
     for(int i=0; i<n; i++){
