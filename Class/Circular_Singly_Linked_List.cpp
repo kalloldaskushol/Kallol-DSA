@@ -57,42 +57,42 @@ void CSLL::insertAtEnd(int item) {
     }
 }
 
-int CSLL::getLength() {
-    if(head == NULL) return 0;
+// int CSLL::getLength() {
+//     if(head == NULL) return 0;
 
-    int count = 0;
-    Node *temp = head;
-    do {
-        count++;
-        temp = temp->next;
-    } while(temp != head);
+//     int count = 0;
+//     Node *temp = head;
+//     do {
+//         count++;
+//         temp = temp->next;
+//     } while(temp != head);
 
-    return count;
-}
+//     return count;
+// }
 
-void CSLL::insertAtAnyPosition(int item, int pos) {
-    int len = getLength();
+// void CSLL::insertAtAnyPosition(int item, int pos) {
+//     int len = getLength();
 
-    if(pos < 1 || pos > len + 1) {
-        cout << "Invalid position\n";
-        return;
-    }
+//     if(pos < 1 || pos > len + 1) {
+//         cout << "Invalid position\n";
+//         return;
+//     }
 
-    if(pos == 1) {
-        insertAtHead(item);
-        return;
-    }
+//     if(pos == 1) {
+//         insertAtHead(item);
+//         return;
+//     }
 
-    Node *n = new Node(item);
-    Node *temp = head;
+//     Node *n = new Node(item);
+//     Node *temp = head;
 
-    for(int i = 1; i < pos - 1; i++) {
-        temp = temp->next;
-    }
+//     for(int i = 1; i < pos - 1; i++) {
+//         temp = temp->next;
+//     }
 
-    n->next = temp->next;
-    temp->next = n;
-}
+//     n->next = temp->next;
+//     temp->next = n;
+// }
 
 void CSLL::deleteHead() {
     if(head == NULL) {
@@ -101,43 +101,21 @@ void CSLL::deleteHead() {
     }
 
     if(head->next == head) {
-        delete head;
+        delete head;// need to modify
         head = NULL;
     } else {
-        Node *temp = head;
-        while(temp->next != head) {
-            temp = temp->next;
+        Node *h = head;
+        while(h->next != head) {
+            h = h->next;
         }
 
         Node *delNode = head;
         head = head->next;
-        temp->next = head;
+        h->next = head;
         delete delNode;
     }
 }
 
-void CSLL::deleteAnyPosition(int pos) {
-    int len = getLength();
-
-    if(pos < 1 || pos > len) {
-        cout << "Invalid position\n";
-        return;
-    }
-
-    if(pos == 1) {
-        deleteHead();
-        return;
-    }
-
-    Node *temp = head;
-    for(int i = 1; i < pos - 1; i++) {
-        temp = temp->next;
-    }
-
-    Node *delNode = temp->next;
-    temp->next = delNode->next;
-    delete delNode;
-}
 
 void CSLL::_search(int item) {
     if(head == NULL) {
@@ -180,10 +158,7 @@ int main() {
     li.insertAtEnd(30);
     li.insertAtAnyPosition(25, 2);
     li.insertAtAnyPosition(5, 1); 
-    li.print();
 
-    li.deleteAnyPosition(3);      
-    li.deleteAnyPosition(1);
     li.print();
 
     return 0;
