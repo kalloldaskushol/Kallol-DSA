@@ -37,7 +37,7 @@ void Queue:: push(int data){ // First IN FIRST OUT
         head = tail = n; // lL empty means when a node will enter, the node will be the head and tail both
     }else{
         tail->next = n;
-        tail = n;
+        tail = n; // So the tail traverse but the head fix at its 1st value
     }
     cnt++;
 }
