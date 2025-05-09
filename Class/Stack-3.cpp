@@ -35,6 +35,14 @@ int main(){
             if(st.empty() == 1 || st.top() == '(' || precedence(in[i] > precedence(st.top())) ){
                 st.push(in[i]);
             }
+            else{
+                while(st.empty() != 1 && st.top() != '(' && precedence(in[i] <= precedence(st.top()))){
+                    post += st.top();
+                    st.pop();
+                }
+                st.push(in[i]);
+            }
+
         }
     }
 
