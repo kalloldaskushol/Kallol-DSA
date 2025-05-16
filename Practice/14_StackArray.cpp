@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 #define SIZE 100
 
 int stack[SIZE];
@@ -28,8 +29,8 @@ void display() {
         return;
     }
     for (int i = top; i >= 0; i--)
-        printf("%d ", stack[i]);
-    printf("\n");
+        cout << stack[i] << " ";
+
 }
 
 // Main

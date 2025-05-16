@@ -70,7 +70,7 @@ void DLL :: deleteHead(){
     
     if(head == NULL){
         cout << "List is Empty" << endl;
-    }else if (head->next == NULL){
+    }else if (head->next == NULL){ // If one element and it is head
         node *h = head;
         head = NULL;
         delete h;

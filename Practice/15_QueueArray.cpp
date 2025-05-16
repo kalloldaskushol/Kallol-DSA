@@ -1,5 +1,7 @@
-#include <stdio.h>
+#include <iostream>
 #define SIZE 100
+
+using namespace std;
 
 int queue[SIZE];
 int front = 0, rear = -1;
@@ -7,7 +9,7 @@ int front = 0, rear = -1;
 // Enqueue function
 void enqueue(int value) {
     if (rear == SIZE - 1)
-        printf("Queue Overflow\n");
+        cout << "Queue Overflow" << endl;
     else
         queue[++rear] = value;
 }
@@ -15,7 +17,7 @@ void enqueue(int value) {
 // Dequeue function
 int dequeue() {
     if (front > rear) {
-        printf("Queue Underflow\n");
+        cout << "Queue Underflow" << endl;
         return -1;
     } else
         return queue[front++];
@@ -24,26 +26,27 @@ int dequeue() {
 // Display queue
 void display() {
     if (front > rear) {
-        printf("Queue is empty\n");
+        cout << "Queue is empty" << endl;
         return;
     }
     for (int i = front; i <= rear; i++)
-        printf("%d ", queue[i]);
-    printf("\n");
+        cout << queue[i] << " ";
+    cout << endl;
 }
 
-// Main
+// Main function
 int main() {
     enqueue(5);
     enqueue(10);
     enqueue(15);
-    printf("Queue: ");
+
+    cout << "Queue: ";
     display();
 
-    printf("Dequeued: %d\n", dequeue());
-    printf("Queue after dequeue: ");
+    cout << "Dequeued: " << dequeue() << endl;
+
+    cout << "Queue after dequeue: ";
     display();
 
     return 0;
 }
-
