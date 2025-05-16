@@ -4,14 +4,14 @@ using namespace std;
 int main(){
 
     // string st = "programming764316";
-    /*
-    Filter a,e,i,o
-    for(int i = 0; i<st.size(); i++){
-        if(st[i] != 'a' && st[i] != 'e' && st[i] != 'i' && st[i] != 'o' &&st[i] != 'u'){
-            cout << st[i] << endl;
-        }
-    }
-    */
+    // // /*
+    // // Filter a,e,i,o
+    // for(int i = 0; i<st.size(); i++){
+    //     if(st[i] != 'a' && st[i] != 'e' && st[i] != 'i' && st[i] != 'o' &&st[i] != 'u'){
+    //         cout << st[i] << endl;
+    //     }
+    // }
+    // // */
 /* Alpa, dig separation
     string alpa = "", dig ="";
 
@@ -28,7 +28,7 @@ int main(){
 /*Palindrome
     string st_1 = "madam";
     string st_rev = "";
-
+*
     for(int i = 0; i< st_1.size(); i++){
         st_rev+=st_1[i];
     }

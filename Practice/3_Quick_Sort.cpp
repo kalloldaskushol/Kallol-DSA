@@ -30,7 +30,7 @@ int main(){
 
     quickSort(0, n-1, arr);
     
-    for(int i=n-1; i>= 0; i--){ // for decending order
+    for(int i=n-1; i>= 0; i--){ // for descending order
         cout << arr[i] << " ";
     }
 
