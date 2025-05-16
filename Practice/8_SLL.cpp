@@ -72,6 +72,20 @@ void SLL::insertAtAnyPos(int item, int pos) {
     // Insert the new node
     n->next = h->next; // Link the new node to the next node
     h->next = n;       // Link the previous node to the new node
+    /*
+    10 -> 20 -> 30 -> 40
+
+    And you want to insert 25 at position 2, then:
+
+    h points to node with value 20 (index 1).
+
+    h->next was pointing to node 30.
+
+    After these two lines:
+
+    n->next points to 30
+
+    h->next points to 25*/
 }
 
 void SLL::print() {
