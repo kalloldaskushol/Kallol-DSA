@@ -7,7 +7,7 @@ int main(){
    stack<string>st;
    cin>>post;
    for(int i=0;i<post.size();i++){
-    if(post[i]>='a' && post[i]<='z'){
+    if(post[i]>='a' && post[i]<='z'){ // Operend
         string temp = "";
         temp+=post[i];
         st.push(temp);
@@ -21,7 +21,7 @@ int main(){
 
         So, you must first make it a string.*/
     }
-    else{
+    else{ // Operator
             string s1 = st.top();
             st.pop();
             string s2 = st.top();
