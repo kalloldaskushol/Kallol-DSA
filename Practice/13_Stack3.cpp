@@ -38,7 +38,7 @@ int main(){
                 post += st.top(); // if the current operator has a low presedance then throw it into the post stiring
                 st.pop();
             }
-            st.push(in[i]);
+                st.push(in[i]);
         }
     }
 
